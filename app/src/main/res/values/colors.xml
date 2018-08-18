@@ -3,4 +3,25 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="city_et_hintColor">#FFBBBBBB</color>
+    <color name="city_et__date_textColor">#FF236295</color>
+    <color name="city_et_textColor">#FFFFFFFF</color>
+
+    <color name="timer_color_minus">#88888888</color>
+
+    <color name="timer_color_00_00_00">#FFff0000</color>
+
+    <color name="timer_color_00_00_05">#FFcc0000</color>
+
+    <color name="timer_color_00_00_15">#FFff8c00</color>
+
+    <color name="timer_color_00_01_00">#FF7fd13d</color>
+
+    <color name="timer_color_01_00_00">#FF4f8fbf</color>
+    <color name="timer_color_white">#FFffffff</color>
+
+    <color name="travel_begin">#FF7f513d</color>
+    <color name="travel_time">#FF7fd13d</color>
+    <color name="travel_end">#FF7ff13d</color>
 </resources>

@@ -1,0 +1,32 @@
+package com.tobzzo.todworzec.dworzeckrakowski
+
+data class ToMdaCourse(
+        var course_id: String?,
+        var departure: String?,
+        var arrival: String?,
+        var duration_minutes: String?,
+        var distance: String?,
+        var price: String?,
+        var price_vat: String?,
+        var available_places: String?,
+        var carrier_description: String?,
+        var carrier_vat_number: String?,
+        var locality_from: String?,
+        var locality_to: String?,
+        var station_from: String?,
+        var station_from_id: String?,
+        var station_to: String?,
+        var station_to_id: String?,
+        var course_type: String?,
+        var course_begin_station: String?,
+        var course_end_station: String?,
+        var with_discount: String?,
+        var begin_station_locality: String?,
+        var end_station_locality: String?,
+        var sale_closed: String?,
+        var arrival_time: String?,
+        var arrival_date: String?,
+        var departure_time: String?,
+        var departure_date: String?,
+        var interval: String? = null
+)

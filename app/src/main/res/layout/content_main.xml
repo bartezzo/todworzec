@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tobzzo.todworzec.dworzeckrakowski.ToMdaMainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FF0000">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/blue_background"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/main_loading_pb"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/main_station_tv"
+                    android:layout_toStartOf="@+id/main_station_tv"
+                    android:indeterminate="true"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/main_station_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+
+                    android:layout_gravity="right"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Kraków"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/city_et_textColor"
+                    android:textSize="25sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+
+                <ImageView
+                    android:id="@+id/main_city_et_search_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/search" />
+
+
+                <EditText
+                    android:id="@+id/main_city_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/main_city_et_search_iv"
+                    android:layout_toRightOf="@+id/main_city_et_search_iv"
+                    android:layout_weight="1"
+                    android:hint="Kierunek"
+                    android:singleLine="true"
+                    android:textColor="@color/city_et_textColor"
+                    android:textColorHint="@color/city_et_hintColor"
+                    android:textSize="25sp" />
+
+
+                <ImageView
+                    android:id="@+id/main_city_et_clear_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/main_city_et"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/main_city_et"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/clear" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#d3d3d3"
+            android:orientation="vertical"
+            android:padding="3dp" >
+
+            <ListView
+                android:id="@+id/main_city_lv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:layout_weight="0.7"
+                android:background="#ccffffff"
+                android:visibility="gone"></ListView>
+
+            <TextView
+                android:id="@+id/main_city_lv_empty_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="brak wyników wyszukiwania"
+                android:visibility="gone"></TextView>
+
+            <ListView
+                android:id="@+id/main_city_last_searched_lv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:layout_weight="0.3"
+                android:background="#ffffffff"
+                android:visibility="visible"></ListView>
+
+            <TextView
+                android:id="@+id/main_city_last_searched_lv_empty_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="brak ostatnich kierunków"
+                android:visibility="visible"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="5dp">
+
+                <RadioGroup
+                    android:id="@+id/main_city_in_out_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.tobzzo.todworzec.dworzeckrakowski.tools.SegmentedControlButton
+                        android:id="@+id/main_city_out_bt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="Odjazdy" />
+
+                    <com.tobzzo.todworzec.dworzeckrakowski.tools.SegmentedControlButton
+                        android:id="@+id/main_city_in_bt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Przyjazdy" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
